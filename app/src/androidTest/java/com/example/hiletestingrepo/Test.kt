@@ -22,7 +22,6 @@ class Test {
     )
 
     @Inject
-    @Named("test")
     lateinit var repository: SuperRepo
 
     @Before

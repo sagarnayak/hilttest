@@ -12,12 +12,17 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     @Named("two")
+    lateinit var repositoryTwo: SuperRepo
+
+    @Inject
     lateinit var repository: SuperRepo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.i("testLog", "the result is : ${repository.login()}")
+        Log.i("testLog", "One :: the result is : ${repository.login()}")
+
+        Log.i("testLog", "Two :: the result is : ${repositoryTwo.login()}")
     }
 }
